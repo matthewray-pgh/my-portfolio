@@ -1,0 +1,65 @@
+[
+  {
+    "heading": "Be Proof the Products Work",
+    "items": [
+      { "index": 0, "label": "Workout" },
+      { "index": 1, "label": "Drink Shakeology" }
+    ]
+  },
+  {
+    "heading": "Connect, Invite, Follow Up",
+    "items": [
+      {
+        "index": 2,
+        "label": "Initiate Connections and Add Followers"
+      },
+      {
+        "index": 3,
+        "label": "Do social media posts that showcases the benefits of your healthy lifestyle or has a call-to-action"
+      },
+      {
+        "index": 4,
+        "label": "Update IG/FB Story throughout the day"
+      },
+      {
+        "index": 5,
+        "label": "Respond to new likes, comments, and views"
+      },
+      {
+        "index": 6,
+        "label": "Invite __ people to join a Challenge Group or learn about coaching"
+      },
+      {
+        "index": 7,
+        "label": "Follow up with people you've invited"
+      }
+    ]
+  },
+  {
+    "heading": "Get People Results",
+    "items": [
+      {
+        "index": 8,
+        "label": "Contribute to your challenge group"
+      },
+      {
+        "index": 9,
+        "label": "Follow up qwith new shakeology users and update the shakeology follow up guide"
+      },
+      { "index": 10, "label": "Recognize achievement" },
+      {
+        "index": 11,
+        "label": "Respond to questions form customers and Coaches"
+      }
+    ]
+  },
+  {
+    "heading": "Do Personal Development",
+    "items": [
+      {
+        "index": 12,
+        "label": "Engage in personal and professional development"
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+/* all */
+.checklist-container {
+  margin: 10px auto;
+  display: grid;
+  justify-content: center;
+}
+
+.date-heading {
+  font-size: 1.25em;
+  font-weight: bold;
+  font-variant: small-caps;
+  padding: 5px 0;
+}
+.sub-heading {
+  font-size: 1em;
+  font-weight: bold;
+  font-variant: small-caps;
+  padding: 10px 0;
+}
+
+.clickable-list-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+
+  font-size: 1em;
+  font-variant: small-caps;
+
+  margin: 5px;
+  padding: 5px;
+  min-height: 30px;
+  cursor: pointer;
+}
+
+.clickable-list-item label {
+  justify-self: start;
+  padding-left: 10px;
+}
+
+/* mobile first */
+.checklist-container {
+  width: 400px;
+}
+
+/* full screen */
+@media (min-width: 600px) {
+  .checklist-container {
+    width: 500px;
+  }
+}

@@ -1,0 +1,66 @@
+import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
+import { Navigation } from "./Navigation";
+
+import "../styles/App.css";
+import "../styles/Header.css";
+
+const Header = () => {
+  const [showNav, setShowNav] = useState(false);
+
+  return (
+    <Fragment>
+      <header className="header-bar">
+        <section className="site-branding">
+          <div id="branding" className="site-branding">
+            <Link to="/" className="branding-link">
+              My App
+            </Link>
+          </div>
+        </section>
+
+        <section className="navigation">
+          <nav className="navigation-options">
+            <ul>
+              <li>
+                <Link to="/containers">Containers</Link>
+              </li>
+              <li>
+                <Link to="/businessTracker">Success Club</Link>
+              </li>
+              <li>
+                <Link to="/fortniteRandom">Fortnite</Link>
+              </li>
+              <li className="mobile-only">
+                <Link to="">Log Out</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <button
+            type="button"
+            className="mobileButtonMenuToggle"
+            onClick={() => setShowNav(true)}
+          >
+            <FontAwesomeIcon icon={faBars} />
+          </button>
+        </section>
+
+        {/* <section id="auth" className="auth">
+        <div>
+          <label>logged in: {}</label>
+        </div>
+        <div>
+          <button>Log out</button>
+        </div>
+      </section> */}
+      </header>
+      <Navigation isVisible={showNav} toggle={setShowNav} />
+    </Fragment>
+  );
+};
+
+export default Header;

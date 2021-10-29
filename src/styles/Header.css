@@ -1,0 +1,151 @@
+/* mobile first */
+.header-bar {
+  background-color: #282c34;
+  align-items: center;
+}
+
+.header-bar li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.header-bar li a {
+  text-decoration: none;
+  cursor: pointer;
+
+  font-variant: small-caps;
+  color: white;
+}
+
+.header-bar li a:hover {
+  color: #61dbfb;
+}
+
+.site-branding {
+  padding: 0 10px;
+}
+
+.branding-link {
+  text-decoration: none;
+  cursor: pointer;
+
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mobile-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.mobileButtonMenuToggle {
+  display: block;
+  justify-self: right;
+
+  padding: 10px;
+  margin: 10px;
+  border: none;
+
+  color: white;
+  background-color: #282c34;
+
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 1.5em;
+
+  cursor: pointer;
+}
+
+.mobile-only {
+  display: block;
+}
+
+.auth {
+  display: none;
+}
+
+#navigation .show-menu {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#navigation .hide-menu {
+  display: none;
+  animation: fadeOut 0.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+}
+
+/* mobile only */
+@media (max-width: 600px) {
+  .header-bar {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .navigation {
+    justify-self: end;
+  }
+
+  .navigation-options {
+    display: none;
+  }
+}
+
+/* full screen */
+@media (min-width: 600px) {
+  .header-bar {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 0 10px;
+    background-color: #282c34;
+  }
+
+  .header-bar ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+  }
+
+  .mobile-header {
+    display: block;
+  }
+
+  .mobileButtonMenuToggle {
+    display: none;
+  }
+
+  #navigation .hide-menu {
+    display: block;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .auth {
+    display: block;
+  }
+}

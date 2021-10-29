@@ -1,0 +1,35 @@
+.fortnite-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+
+  margin: 0 auto;
+  width: 300px;
+}
+
+.output {
+  padding: 10px;
+
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.listItem {
+  padding: 5px;
+
+  font-size: 0.85em;
+}
+
+.buttonStyle {
+  width: 150px;
+  padding: 10px;
+
+  color: white;
+  background-color: darkcyan;
+
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 1em;
+
+  cursor: pointer;
+}

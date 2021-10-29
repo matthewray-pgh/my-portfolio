@@ -1,0 +1,49 @@
+.clickable-list-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: left;
+
+  font-size: 1em;
+  font-variant: small-caps;
+
+  margin: 5px;
+  padding: 5px;
+  min-height: 30px;
+  cursor: pointer;
+}
+
+.clickable-list-item div {
+  font-size: 1.5em;
+}
+
+.clickable-list-item label {
+  cursor: pointer;
+  text-align: left;
+}
+
+/* clicked  */
+.clicked {
+  background-color: rgb(233, 233, 233);
+  border-left: solid 3px green;
+}
+
+.clicked div {
+  color: green;
+}
+
+.clicked label {
+  color: darkgray;
+}
+
+/* not clicked */
+.not-clicked {
+  background-color: white;
+}
+
+.not-clicked div {
+  color: darkgray;
+}
+
+.not-clicked label {
+  color: black;
+}
