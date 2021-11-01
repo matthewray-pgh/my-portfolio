@@ -1,35 +1,63 @@
+.fortnite__header {
+  display: grid;
+  align-items: end;
+  justify-items: center;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(31, 83, 117, 0.52),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("../assets/fortniteJumbo.jpeg");
+  background-size: cover;
+  width: 100%;
+
+  color: white;
+  font-variant: small-caps;
+}
+
+.fortnite__header-title {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.fortnite__header-text {
+  font-size: 20px;
+}
+
 .fortnite-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: start;
+  justify-items: center;
 
   margin: 0 auto;
+  padding: 10px;
   width: 300px;
 }
 
 .output {
   padding: 10px;
-
   font-size: 1em;
   font-weight: bold;
 }
 
 .listItem {
   padding: 5px;
-
   font-size: 0.85em;
 }
 
 .buttonStyle {
-  width: 150px;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 50%;
 
   color: white;
-  background-color: darkcyan;
+  background-color: var(--lightSeaGreen);
 
   font-weight: bold;
   font-variant: small-caps;
   font-size: 1em;
 
   cursor: pointer;
+
+  border: none;
 }
