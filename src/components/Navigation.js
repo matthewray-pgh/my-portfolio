@@ -2,17 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/Navigation.css";
 
 export const Navigation = (props) => {
   return (
     <section
-      id="navigation-menu"
-      className={
-        props.isVisible ? "navigation-menu__show" : "navigation-menu__hide"
-      }
+      className={props.isVisible ? "navigation-menu active" : "navigation-menu"}
     >
       <div className="navigation-menu__header">
         <button
@@ -23,6 +20,15 @@ export const Navigation = (props) => {
           <FontAwesomeIcon icon={faTimes} />
         </button>
       </div>
+
+      <section className="navigation-menu__profile">
+        <div className="navigation-menu__profile--icon">
+          <FontAwesomeIcon icon={faUserCircle} size />
+        </div>
+        <div className="navigation-menu__profile--text">
+          <p>Hello, {props.userName}</p>
+        </div>
+      </section>
 
       <nav className="navigation-menu__options">
         <ul>

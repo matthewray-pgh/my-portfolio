@@ -10,6 +10,7 @@ import "../styles/Header.css";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
+  const [userName, setUserName] = useState("UserName 12345");
 
   return (
     <Fragment>
@@ -58,7 +59,7 @@ const Header = () => {
         </div>
       </section> */}
       </header>
-      <Navigation isVisible={showNav} toggle={setShowNav} />
+      <Navigation isVisible={showNav} toggle={setShowNav} userName={userName} />
     </Fragment>
   );
 };
