@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div>
         <Header />
-        <div className="App">
+        <div className="app">
           <Switch>
             <Route path="/containers">
               <Containers />

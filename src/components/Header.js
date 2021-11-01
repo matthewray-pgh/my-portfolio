@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 
 import { Navigation } from "./Navigation";
 
@@ -18,6 +18,7 @@ const Header = () => {
         <section className="site-branding">
           <div id="branding" className="site-branding">
             <Link to="/" className="branding-link">
+              <FontAwesomeIcon icon={faLaptopCode} />
               My App
             </Link>
           </div>

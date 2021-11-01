@@ -23,7 +23,7 @@ export const Navigation = (props) => {
 
       <section className="navigation-menu__profile">
         <div className="navigation-menu__profile--icon">
-          <FontAwesomeIcon icon={faUserCircle} size />
+          <FontAwesomeIcon icon={faUserCircle} />
         </div>
         <div className="navigation-menu__profile--text">
           <p>Hello, {props.userName}</p>
