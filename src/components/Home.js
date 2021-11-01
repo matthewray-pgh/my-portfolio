@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartBar } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -13,7 +14,7 @@ function Home() {
     <main className="home">
       <article className="about">
         <section className="about__content">
-          <h2 className="about__title">Hello, Welcome to my work!</h2>
+          <h2 className="about__title">Welcome to my stuff!</h2>
           <p className="about__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
