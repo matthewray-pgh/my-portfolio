@@ -1,6 +1,6 @@
 /* mobile first */
 .header-bar {
-  background-color: #282c34;
+  background-color: var(--gunmetal);
   align-items: center;
 }
 
@@ -30,6 +30,8 @@
   cursor: pointer;
 
   color: white;
+
+  font-variant: small-caps;
   font-weight: bold;
   font-size: 18px;
 }
