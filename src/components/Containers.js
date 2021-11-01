@@ -2,6 +2,10 @@ import React, { useState, useMemo } from "react";
 
 import DrawBars from "./charts/DrawBars";
 import useCharts from "../components/charts/useCharts";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+
+import "../styles/Containers.css";
 
 const Containers = () => {
   const [totals, setTotals] = useState([
@@ -99,6 +103,13 @@ const Containers = () => {
           );
         })}
       </svg>
+
+      <section className="containers__form">
+        <button className="containers__form-button">
+          <FontAwesomeIcon icon={faPlus} />
+        </button>
+        <p>form to add meal and edit containers</p>
+      </section>
     </main>
   );
 };

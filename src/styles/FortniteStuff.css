@@ -47,15 +47,13 @@
 }
 
 .buttonStyle {
-  padding: 20px;
+  padding: 15px;
   border-radius: 50%;
 
   color: white;
   background-color: var(--lightSeaGreen);
 
-  font-weight: bold;
-  font-variant: small-caps;
-  font-size: 1em;
+  font-size: 1.25em;
 
   cursor: pointer;
 

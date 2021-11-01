@@ -1,0 +1,28 @@
+.containers__form {
+  height: 50px;
+}
+
+.containers__form-button {
+  padding: 10px 12px;
+  border-radius: 50%;
+
+  color: white;
+  background-color: var(--lightSeaGreen);
+
+  font-size: 1.25em;
+
+  cursor: pointer;
+  border: none;
+}
+
+/* mobile only */
+@media (max-width: 600px) {
+  .containers__form-button {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+/* desktop */
+@media (min-width: 600px) {
+}
