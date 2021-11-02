@@ -39,6 +39,14 @@ export const Navigation = (props) => {
           </li>
           <li>
             <Link
+              to="/fourHourBody"
+              onClick={() => props.toggle(!props.isVisible)}
+            >
+              4 Hour Body
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/containers"
               onClick={() => props.toggle(!props.isVisible)}
             >
