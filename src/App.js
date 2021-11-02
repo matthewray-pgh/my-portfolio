@@ -8,6 +8,7 @@ import Home from "./components/Home.js";
 import Containers from "./components/Containers";
 import BusinessTracker from "./components/BusinessTracker.js";
 import FortniteStuff from "./components/FortniteStuff.js";
+import FourHourBody from "./components/4HB";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/fortniteRandom">
               <FortniteStuff />
+            </Route>
+            <Route path="/fourHourBody">
+              <FourHourBody />
             </Route>
             <Route path="/">
               <Home />

@@ -16,17 +16,21 @@ const Header = () => {
     <Fragment>
       <header className="header-bar">
         <section className="site-branding">
-          <div id="branding" className="site-branding">
-            <Link to="/" className="branding-link">
-              <FontAwesomeIcon icon={faLaptopCode} />
-              My App
-            </Link>
-          </div>
+          <Link to="/" className="branding-link">
+            <FontAwesomeIcon
+              className="branding-link__icon"
+              icon={faLaptopCode}
+            />
+            <h1 className="branding-link__title">My Stuff</h1>
+          </Link>
         </section>
 
         <section className="navigation">
           <nav className="navigation-options">
             <ul>
+              <li>
+                <Link to="/fourHourBody">4 Hour Body</Link>
+              </li>
               <li>
                 <Link to="/containers">Containers</Link>
               </li>

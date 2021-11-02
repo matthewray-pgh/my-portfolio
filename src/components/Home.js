@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartBar } from "@fortawesome/free-regular-svg-icons";
 import {
   faClipboardCheck,
   faMapMarkedAlt,
+  faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/Home.css";
@@ -28,6 +28,16 @@ function Home() {
       </article>
 
       <section className="details">
+        <article className="details__article">
+          <div className="details__icon new">
+            <FontAwesomeIcon icon={faUtensils} />
+          </div>
+          <h2 className="details__title">Four Hour Body</h2>
+          <p className="details__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </article>
         <article className="details__article">
           <div className="details__icon first">
             <FontAwesomeIcon icon={faChartBar} />
