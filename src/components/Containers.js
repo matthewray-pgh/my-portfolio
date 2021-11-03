@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useMemo } from "react";
 
 import DrawBars from "./charts/DrawBars";
 import useCharts from "../components/charts/useCharts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/Containers.css";
 
@@ -17,6 +18,21 @@ const Containers = () => {
     { name: "orange", color: "#ED7700", total: 2, daily: 0 },
     { name: "spoon", color: "#7F7F7F", total: 4, daily: 0 },
   ]);
+  const [showForm, setShowForm] = useState(false);
+
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
+
+  const increment = (data, index) => {
+    totals[index].daily = data.daily + 1;
+    setTotals(totals);
+  };
+
+  const decrement = (data, index) => {
+    totals[index].daily = data.daily > 0 ? data.daily - 1 : 0;
+    setTotals(totals);
+  };
 
   const width = 400;
   const height = 500;
@@ -40,8 +56,10 @@ const Containers = () => {
   }, [yScale]);
 
   return (
-    <main className="App-body">
-      <h2>Containers</h2>
+    <main className="containers">
+      <header className="containers__header">
+        <h2 className="containers__header-title">Containers</h2>
+      </header>
       <svg width={width} height={height}>
         <line
           x1={margin.left}
@@ -56,7 +74,7 @@ const Containers = () => {
 
         {totals.map((d, i) => {
           return (
-            <g>
+            <g key={`${d.name}-${i}`}>
               <text
                 key={`axis-text-${i}`}
                 x={margin.left - 10}
@@ -104,11 +122,55 @@ const Containers = () => {
         })}
       </svg>
 
-      <section className="containers__form">
-        <button className="containers__form-button">
-          <FontAwesomeIcon icon={faPlus} />
-        </button>
-        <p>form to add meal and edit containers</p>
+      <section
+        className={showForm ? "containers__form active" : "containers__form"}
+      >
+        <a
+          onClick={toggleForm}
+          className={
+            showForm
+              ? "containers__form-button--display active"
+              : "containers__form-button--display"
+          }
+        >
+          <FontAwesomeIcon icon={faArrowUp} />
+        </a>
+
+        <form>
+          <section className="form__number-section">
+            {totals.map((d, i) => {
+              return (
+                <div className="form__number-container" key={`${d.name}-${i}`}>
+                  <button
+                    type="button"
+                    className="form__number-button--minus"
+                    onClick={() => decrement(d, i)}
+                  >
+                    <FontAwesomeIcon icon={faMinus} />
+                  </button>
+                  <input type="text" className="form__number" value={d.daily} />
+                  <button
+                    type="button"
+                    className="form__number-button--plus"
+                    onClick={() => increment(d, i)}
+                  >
+                    <FontAwesomeIcon icon={faPlus} />
+                  </button>
+                </div>
+              );
+            })}
+          </section>
+
+          <div className="form__text-container">
+            <label htmlFor="txtMealName" className="form__text-label">
+              Meal Name
+            </label>
+            <input id="txtMealName" type="text" className="form__text"></input>
+          </div>
+          <button type="button" className="form__button">
+            SUBMIT
+          </button>
+        </form>
       </section>
     </main>
   );
