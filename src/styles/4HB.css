@@ -54,11 +54,72 @@
 
 .rules__title {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 35px;
 }
 
 .rules__text {
-  font-size: 16px;
+  font-size: 20px;
+}
+
+.rule {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.rule__bg-image--bread {
+  background-image: url("../assets/bread.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: end;
+}
+
+.rule__bg-image--meals {
+  background-image: url("../assets/meals.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  display: flex;
+  justify-content: end;
+}
+
+.rule__bg-image--fruit {
+  background-image: url("../assets/fruit.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  display: flex;
+  justify-content: end;
+}
+
+.rule__bg-image--drink {
+  background-image: url("../assets/drink.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+  display: flex;
+  justify-content: end;
+}
+
+.rule__bg-image--binge {
+  background-image: url("../assets/binge.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  display: flex;
+  justify-content: end;
+}
+
+.rule__number {
+  color: white;
+  padding: 0px;
+  font-size: 250px;
+  font-weight: bold;
+  font-variant: normal;
+
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 /* mobile only */
@@ -123,7 +184,7 @@
   }
 
   .fourHourBody__content {
-    max-width: 600px;
+    max-width: 700px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -170,6 +231,25 @@
 
   .rules__text {
     margin: 0;
+    padding: 20px;
     align-self: start;
+  }
+
+  .rule {
+    max-width: 900px;
+  }
+
+  .rule__container {
+    height: 300px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .rule__image {
+    width: 100%;
+    height: auto;
   }
 }

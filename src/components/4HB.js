@@ -16,27 +16,32 @@ const fourHourBody = () => {
     {
       icon: faBreadSlice,
       title: "Avoid White Carbs",
-      text: "Nothing white is good for you.",
+      text: "Nothing white is good for you. No breads, rice, or anything else. Avoid any foods that are, or can be white.",
+      background: "rule__bg-image--bread",
     },
     {
       icon: faRedoAlt,
-      title: "Eat the same meals, again and again...",
-      text: "Most food is garbage, so stick to the stuff that is healthy.",
+      title: "Eat the same meals",
+      text: "Most food is garbage, so stick to the stuff that is healthy. Mix and match from 3 groups, protiens (egg white, eggsm chicken breast, beef,, fish, pork. legumes, lentil, black beans, red beans, pinto, soy. vegetables: spinach, brocoli cauilfour, aspargus, peas green beans",
+      background: "rule__bg-image--meals",
     },
     {
       icon: faGlassCheers,
       title: "Don't drink calories",
-      text: "Only drink water. No pop, milk, or alcohol.",
+      text: "Only drink water. No pop, milk, or alcohol. Drink massive amounts of water, tea, or coffee. Limit diet soft drinks as well. Dry red wines are allowed, but no more than 2 glasses per evening",
+      background: "rule__bg-image--drink",
     },
     {
       icon: faAppleAlt,
       title: "Don't eat fruit",
-      text: "We don't need fruits. Unnecessary sugars.",
+      text: "We don't need fruits. Unnecessary sugars equal fat storage. Only exception of tomatoes and avacados",
+      background: "rule__bg-image--fruit",
     },
     {
       icon: faCookieBite,
-      title: "Binge Once a week",
-      text: "Eat everything you want, once every seven days.",
+      title: "One day a week off",
+      text: "Dieters gone wild and binge everything you want, once every seven days. This will increase metabolic rate once a week.",
+      background: "rule__bg-image--binge",
     },
   ];
   return (
@@ -54,16 +59,19 @@ const fourHourBody = () => {
         </article>
       </header>
 
-      <h2>The Food Rules</h2>
-      <section className="rules">
+      <h2>The Slow Carb Diet</h2>
+
+      <section className="rule">
         {foodRules.map((rule, i) => {
           return (
-            <article className="rules__article">
-              <div className="rules__icon">
-                <FontAwesomeIcon icon={rule.icon} />
+            <article className="rule__container">
+              <div className={rule.background}>
+                <div className="rule__number">{i + 1}</div>
               </div>
-              <h2 className="rules__title">{rule.title}</h2>
-              <p className="rules__text">{rule.text}</p>
+              <div>
+                <h2 className="rules__title">{rule.title}</h2>
+                <p className="rules__text">{rule.text}</p>
+              </div>
             </article>
           );
         })}
