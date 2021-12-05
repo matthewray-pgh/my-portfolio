@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import Header from "../components/Header";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEye,
@@ -5,7 +8,6 @@ import {
   faRedoAlt,
   faRandom,
 } from "@fortawesome/free-solid-svg-icons";
-import React, { useState } from "react";
 
 import locations from "../assets/fortniteLocations.json";
 import "../styles/FortniteStuff.css";
@@ -44,10 +46,13 @@ const FortniteStuff = () => {
   return (
     <main>
       <header className="fortnite__header">
-        <h2 className="fortnite__header-title">Fortnite locations</h2>
-        <p className="fortnite__header-text">
-          sample sentence explaining what this page is meant to do.
-        </p>
+        <Header />
+        <section className="fortnite__header--content">
+          <h2 className="fortnite__header--title">Fortnite locations</h2>
+          <p className="fortnite__header--text">
+            sample sentence explaining what this page is meant to do.
+          </p>
+        </section>
       </header>
 
       <article className="fortnite-container">
@@ -78,6 +83,8 @@ const FortniteStuff = () => {
             })}
           </div>
         </section>
+
+        <section id="spinner"></section>
       </article>
     </main>
   );

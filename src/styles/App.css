@@ -8,6 +8,8 @@
   --lightSeaGreen: #00a9a5;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=PT+Sans+Narrow&display=swap");
+
 .app {
   margin: 0px auto;
   background-color: #e0e0e2;

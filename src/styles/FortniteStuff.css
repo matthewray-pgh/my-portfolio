@@ -1,27 +1,28 @@
 .fortnite__header {
-  display: grid;
-  align-items: end;
-  justify-items: center;
-
   background-image: linear-gradient(
       to right,
       rgba(31, 83, 117, 0.52),
       rgba(0, 0, 0, 0.85)
     ),
     url("../assets/fortniteJumbo.jpeg");
-  background-size: cover;
+  /* background-size: cover; */
+  background-position: center;
   width: 100%;
 
   color: white;
   font-variant: small-caps;
 }
 
-.fortnite__header-title {
+.fortnite__header--content {
+  padding: 30px 0;
+}
+
+.fortnite__header--title {
   font-size: 35px;
   font-weight: bold;
 }
 
-.fortnite__header-text {
+.fortnite__header--text {
   font-size: 20px;
 }
 
