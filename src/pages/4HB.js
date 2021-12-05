@@ -1,7 +1,7 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Header from "../components/Header";
 
-import "../styles/4HB.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBreadSlice,
   faRedoAlt,
@@ -10,6 +10,8 @@ import {
   faCookieBite,
   faHistory,
 } from "@fortawesome/free-solid-svg-icons";
+
+import "../styles/4HB.css";
 
 const fourHourBody = () => {
   const foodRules = [
@@ -47,6 +49,7 @@ const fourHourBody = () => {
   return (
     <main className="fourHourBody">
       <header className="fourHourBody__header">
+        <Header />
         <article className="fourHourBody__content">
           <FontAwesomeIcon className="fourHourBody__icon" icon={faHistory} />
           <h2 className="fourHourBody__title">4-Hour Body</h2>

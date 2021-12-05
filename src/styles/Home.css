@@ -2,21 +2,25 @@
   margin: 0 auto;
   display: grid;
   justify-items: center;
-  font-variant: small-caps;
+  /* font-variant: small-caps; */
+  background-color: white;
+
+  font-family: "Dosis";
 }
 
 .about {
-  display: grid;
-  align-items: end;
-  justify-items: center;
+  /* display: grid; */
+  /* align-items: end; */
+  /* justify-items: center; */
 
   background-image: linear-gradient(
       to right,
-      rgba(31, 83, 117, 0.52),
-      rgba(0, 0, 0)
+      rgba(20, 63, 56, 0.9),
+      rgba(59, 21, 45, 0.9)
     ),
-    url("../assets/computerCode.jpg");
+    url("../assets/computerBackground.jpg");
   background-size: cover;
+  background-position: bottom;
   width: 100%;
 }
 
@@ -27,18 +31,25 @@
 
 .details {
   padding: 10px;
+  width: 100%;
+}
+
+.details a {
+  color: var(--gunmetal);
+  text-decoration: none;
+  transition: 500ms;
+}
+
+.details a:hover {
+  background-color: var(--gainsboro);
+  transition: 500ms;
 }
 
 .details__article {
   display: grid;
-  align-items: center;
   justify-items: center;
 
-  padding: 30px;
-}
-
-.details__article p {
-  text-align: justify;
+  padding: 20px;
 }
 
 .details__icon {
@@ -72,6 +83,15 @@
   color: var(--lightSeaGreen);
 }
 
+.contact {
+}
+
+.contact__header {
+}
+
+.contact__content {
+}
+
 /* mobile only */
 @media (max-width: 600px) {
   .about__content {
@@ -103,27 +123,37 @@
 /* desktop */
 @media (min-width: 600px) {
   .about {
-    padding-top: 50px;
-    min-height: 200px;
+    min-height: 700px;
+    align-content: center;
+  }
+
+  .about__icon {
+    font-size: 60px;
+    padding-bottom: 30px;
   }
 
   .about__content {
-    margin: 50px 0 20px 0;
-    max-width: 900px;
+    margin: 50px auto;
+    max-width: 800px;
   }
 
   .about__title {
-    font-size: 30px;
+    font-size: 60px;
     font-weight: bold;
-    text-align: right;
+    text-align: center;
   }
 
   .about__text {
-    font-size: 25px;
+    font-size: 35px;
   }
 
-  .details {
+  .details__header {
+    text-align: center;
+  }
+
+  .details__content {
     max-width: 900px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;

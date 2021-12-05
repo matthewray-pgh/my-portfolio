@@ -1,6 +1,5 @@
 /* mobile first */
 .header-bar {
-  background-color: var(--gunmetal);
   align-items: center;
 }
 
@@ -13,7 +12,7 @@
   text-decoration: none;
   cursor: pointer;
 
-  font-variant: small-caps;
+  /* font-variant: small-caps; */
   color: white;
 }
 
@@ -35,13 +34,13 @@
 
   color: white;
 
-  font-variant: small-caps;
+  /* font-variant: small-caps; */
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .branding-link__icon {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .branding-link__title {
@@ -49,6 +48,10 @@
   margin: 0;
   padding: 0 0 5px 10px;
   font-size: 22px;
+}
+
+.navigation {
+  font-size: 20px;
 }
 
 .mobile-only {
@@ -121,10 +124,10 @@
     border: none;
 
     color: white;
-    background-color: #282c34;
+    background-color: transparent;
 
     font-weight: bold;
-    font-variant: small-caps;
+    /* font-variant: small-caps; */
     font-size: 1.5em;
 
     cursor: pointer;
@@ -137,7 +140,6 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     padding: 0 10px;
-    background-color: #282c34;
   }
 
   .header-bar ul {

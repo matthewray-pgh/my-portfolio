@@ -3,18 +3,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./styles/App.css";
 
-import Header from "./components/Header.js";
-import Home from "./components/Home.js";
+import Home from "./pages/Home.js";
 import Containers from "./components/Containers";
 import BusinessTracker from "./components/BusinessTracker.js";
-import FortniteStuff from "./components/FortniteStuff.js";
-import FourHourBody from "./components/4HB";
+import FortniteStuff from "./pages/FortniteStuff.js";
+import FourHourBody from "./pages/4HB";
 
 function App() {
   return (
     <Router>
       <div>
-        <Header />
         <div className="app">
           <Switch>
             <Route path="/containers">
